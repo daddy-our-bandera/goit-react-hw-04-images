@@ -10,7 +10,7 @@ export default function Modal({ onClose, children }) {
     window.addEventListener('keydown', handleEscape);
 
     return () => {
-      window.addEventListener('keydown', handleEscape);
+      window.removeEventListener('keydown', handleEscape);
     };
   });
 
